@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>
+	<li>2015년 1월 9일 연습</li>
+</p>
+
+
+<button onclick="displayCarName()">View Car Name</button>
+
+<p id="demo"></p>
+<p id="result"></p>
+
+<script>
+	var carName1 = '"It\'s my Car"';
+	var carName2 = "My car \n\r Name is \"volvo XC60\" ";
+	
+	function displayCarName() {
+		document.getElementById("demo").innerHTML = carName1 + "<br>" + carName2;
+		document.getElementById("result").innerHTML = carName1.length + carName2.length
+	}
+
+</script>
+
+</body>
+</html>
