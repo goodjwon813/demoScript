@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>
+	<li>2015년 1월 12일 연습</li>
+	<li>2015년 1월 16일 연습</li>
+	<li>The two methods, indexOf() and search(), are equal. </li>
+	<li>JavaScript counts positions from zero, 0 is the first position in a string, 1 is the second, 2 is the third ...  </li>
+</p>
+<p id="p1">Plase locate where 'locat' occurs!!</p>
+
+
+<p id="demo0"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<p id="demo"></p>
+
+
+<script>
+	var str = "Please locat where 'locat' occurs!! ";
+	//var post = str.indexOf("locat");  //문자열의 위치 반환 	indexOf == search
+	//var post = str.lastIndexOf("locat"); //문자의 반환
+	var post = str.search("locat"); //문자열의 위치 반환 		indexOf == search
+	var sRes = str.slice(0, 10);
+	var subStringRes = str.substring(0, 10);
+	
+	
+	var txts = "a,b,c,d,e,f,g,h,i,j";
+	
+	document.getElementById("demo0").innerHTML = sRes;
+	document.getElementById("demo1").innerHTML = subStringRes;
+	
+	var arrs = txts.split(",");
+	
+	for (var i=0; i < arrs.length; i++){
+		document.getElementById("demo").innerHTML = arrs[i];
+	}
+	
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

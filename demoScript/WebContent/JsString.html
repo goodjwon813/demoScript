@@ -16,9 +16,22 @@
 <p id="demo"></p>
 <p id="result"></p>
 
+<p id="demoOftype"></p>
+<p id="demoOftype"></p>
+<p id="demoOfXtype"></p>
+<p id="demoOfYtype"></p>
+
 <script>
 	var carName1 = '"It\'s my Car"';
 	var carName2 = "My car \n\r Name is \"volvo XC60\" ";
+	
+	var x = "John";				// this is String
+	var y = new String("John"); // this is Object
+	
+	document.getElementById("demoOftype").innerHTML = x == y;
+	document.getElementById("demoOfXtype").innerHTML = typeof x;
+	document.getElementById("demoOfYtype").innerHTML = typeof y;
+	
 	
 	function displayCarName() {
 		document.getElementById("demo").innerHTML = carName1 + "<br>" + carName2;
