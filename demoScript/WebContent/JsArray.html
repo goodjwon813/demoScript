@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li>Array는 index를 숫자로 가진다.</li>
+	<li>Array는 new 연산자를 사용하지 않는다.</li>
+	<li>Array는 Object 이므로 필요 할 시 별도의 반단 function을 만들어 사용한다.</li>
+	
+</ul>
+<p id="result0"></p>
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<button onclick="myFunction();" style="width: 80px">Remove</button>
+<button onclick="myFunctionPush();" style="width: 80px">Add</button>
+<script>
+	var fruits = ["Banana","Orange","Apple","Mango","Melron"];
+	document.getElementById("result0").innerHTML = fruits.length;
+	document.getElementById("result3").innerHTML = fruits;
+	
+	var index;
+	var text = "<ul>";
+	
+	for(index = 0; index < fruits.length ; index++) {
+		text += "<li>" + index +". "+ fruits[index] + "</li>";
+	}
+	
+	text += "</ul>";
+	document.getElementById("result1").innerHTML = text;
+	
+	
+	document.getElementById("result2").innerHTML = isArray(fruits);
+	
+	function isArray(myArray) {
+		return myArray.constructor.toString().indexOf("Array") > -1;
+	}
+	
+ 	function myFunction() {
+ 		fruits.pop();
+ 		document.getElementById("result3").innerHTML = fruits;
+ 	}
+ 	
+ 	function myFunctionPush() {
+ 		fruits.push("Kiwi");
+ 		document.getElementById("result3").innerHTML = fruits;
+ 	}
+	
+	function sortFuction() {
+ 		fruits.push("Kiwi");
+ 		document.getElementById("result3").innerHTML = fruits;
+		
+	}
+	
+</script>
+</body>
+</html>

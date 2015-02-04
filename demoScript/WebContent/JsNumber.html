@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<ui>
+	<li>Number()</li>
+	<li>parseFloat()</li>
+	<li>parseInt()</li>
+	<li>toString()</li>
+	<li>toExponential()</li>
+	<li>toFixed(소수점 자리) : 소수점 자리에서 반올림 처리 0 부터 시작한다.</li>
+	<li>toPrecsion(숫자열 자리) : "숫자열 자리수의 반올림 처리 0 부터 시작한다.</li>
+	<li>valueOf()</li>
+</ui>
+
+
+<p id="result0"></p>
+<p id="result1"></p>
+
+
+</body>
+<script>
+	var x = 123;
+	var y = x.toString();
+	var z = (123).toString();
+	var k = (100+23).toString();
+	
+	document.getElementById("result0").innerHTML = x +"<br>"+ y + "<br>" + z + "<br>"+k;
+	
+	
+	var a = Number(true);
+	var b = Number(false);
+	var c = Number(new Date());
+	var d = Number(" 10");
+	var e = Number("10 6");
+	
+	
+	
+	
+	document.getElementById("result1").innerHTML = a +"<br>"+ b +"<br>"+ c +"<br>"+ d +"<br>"+ e;
+	
+</script>
+</html>
